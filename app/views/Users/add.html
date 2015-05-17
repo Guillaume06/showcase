@@ -1,0 +1,47 @@
+
+<form>
+  <fieldset>
+    <h2 ng-if="!edit" class="center">Ajout d'un utilisateur</h2>
+
+    <h2 ng-if="edit" class="center">Edition d'un utilisateur</h2>
+    <br>
+
+    <div>
+      <label for="name" class="col-lg-4">Nom</label>
+
+      <div class="col-lg-6">
+        <input type="text" id="name" ng-model="user.name" class="input-lg">
+      </div>
+    </div>
+    <div>
+      <label for="surname" class="col-lg-4">Prénom</label>
+
+      <div class="col-lg-6">
+        <input type="text" id="surname" ng-model="user.surname" class="input-lg">
+      </div>
+    </div>
+    <div>
+      <label for="email" class="col-lg-4">Email</label>
+
+      <div class="col-lg-6">
+        <input type="email" id="email" ng-model="user.email" class="input-lg">
+      </div>
+    </div>
+
+    <div>
+      <label for="website" class="col-lg-4">Site personnel</label>
+
+      <div class="col-lg-6">
+        <input type="text" id="website" ng-model="user.website" class="input-lg">
+      </div>
+    </div>
+    <br><br>
+    <div class="col-lg-8">
+    <button type="submit" ng-if="edit" class="btn btn-success" ng-click="saveData()">Valider les modifications</button>
+      <button type="submit" ng-if="!edit" class="btn btn-success" ng-click="sendData()">Ajouter</button>
+    <a href="#/users">
+      <button id="cancel" name="cancel" class="btn btn-danger" >Annuler</button>
+    </a>
+      </div>
+  </fieldset>
+</form>

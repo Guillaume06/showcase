@@ -1,0 +1,42 @@
+
+<form>
+  <fieldset>
+    <h2 ng-if="!edit" class="center">Ajout d'un projet</h2>
+
+    <h2 ng-if="edit" class="center">Edition d'un projet</h2>
+    <br>
+
+    <div>
+      <label class="col-lg-4" for="title">Nom</label>
+      <div class="col-lg-6">
+        <input id="title" name="title"  class=" input-lg" required="" type="text"
+               ng-model="project.title">
+
+      </div>
+    </div>
+    <div>
+      <label class="col-lg-4 " for="year">Date</label>
+
+      <div class="col-lg-6">
+        <input id="year" name="year" class=" input-lg" required="" type="number"
+               ng-model="project.year">
+      </div>
+    </div>
+    <div>
+      <label class="col-lg-4 " for="description">Synopsis</label>
+
+      <div class="col-lg-6">
+        <textarea class="col-lg-12" id="description" ng-model="project.description" name="description"></textarea>
+      </div>
+    </div>
+    <div class>
+      <div class="col-lg-8">
+        <button type="submit" ng-if ="edit" name="save" class="btn btn-success" ng-click="saveData()">Valider les modifications</button>
+        <button type="submit" ng-if ="!edit" name="save" class="btn btn-success" ng-click="saveData()">Ajouter</button>
+        <a href="#/projects">
+          <button id="cancel" name="cancel" class="btn btn-danger">Annuler</button>
+        </a>
+      </div>
+    </div>
+  </fieldset>
+</form>

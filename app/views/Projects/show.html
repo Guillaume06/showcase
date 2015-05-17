@@ -1,0 +1,25 @@
+<h3 class="center">Nom : {{ project.title }}</h3>
+<p>Année : {{ project.year }}</p>
+<p>Synopsis : {{ project.description }}</p>
+<div>
+  <br>
+  <h2>Utilisateurs</h2>
+
+</div>
+<table class="table   ">
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Role</th>
+  </tr>
+  </thead>
+  <tr ng-repeat="user in users">
+    <td>{{ user.surname }}</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.role }}</td>
+  </tr>
+</table>
+<a href="#/addrole">
+  <button class="btn btn-primary">Ajouter un utilisateur</button>
+</a>

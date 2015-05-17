@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-offset-1 col-lg-10">
+    <h2>Liste des utilisateurs</h2>
+  </div>
+  <div class="col-lg-12">
+    <p>Recherche :
+      <input type="text" ng-model="user">
+      <br><br><a href="#/users/add">
+        <button class="btn btn-sm btn-info">Ajouter un utilisateur</button>
+      </a>
+    </p>
+  </div>
+  <div class="col-lg-12">
+    <table class="table table-bordered table-hover">
+      <tr ng-repeat="user in users | filter:user">
+        <td><a href="#/{{ user.id }}/show">{{ user.name }}, {{ user.surname }}</a></td>
+        <td><a href="#/{{ user.id }}/edit"><img
+          src="https://cdn4.iconfinder.com/data/icons/simplicio/128x128/file_edit.png" width="50" height="50"/></a></td>
+        <td><a href="" ng-click="delete(user.id)"><img
+          src="http://pinsoftstudios.com/wp-content/uploads/2012/07/delete-big.jpg" width="50" height="50"/></a></td>
+      </tr>
+    </table>
+  </div>
+</div>

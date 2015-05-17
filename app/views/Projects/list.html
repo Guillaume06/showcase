@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-offset-4 col-lg-5">
+    <h2>Liste des projets</h2>
+  </div>
+  <div class="col-lg-12">
+    <p>Recherche :
+      <input type="text" ng-model="project.title">
+      <br><br>
+      <a href="#/projects/add">
+        <button class="btn btn-sm btn-info">Ajouter un projet</button>
+      </a>
+    </p>
+  </div>
+  <div class="col-lg-12">
+    <table class="table table-bordered table-hover">
+      <tr ng-repeat="project in projects | filter:project">
+        <td><a href="#/projects/{{ project.id }}/show"> {{ project.title }} </a></td>
+        <td> {{ project.description}}</td>
+        <td><a href="#/projects/{{ project.id }}/edit"><img
+          src="https://cdn4.iconfinder.com/data/icons/simplicio/128x128/file_edit.png" width="50" height="50"/></a></td>
+        <td><a href="" ng-click="delete(project.id)"><img
+          src="http://pinsoftstudios.com/wp-content/uploads/2012/07/delete-big.jpg" width="50" height="50"/></a></td>
+      </tr>
+    </table>
+  </div>
+</div>

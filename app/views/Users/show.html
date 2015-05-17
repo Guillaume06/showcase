@@ -1,0 +1,35 @@
+<h2>Utilisateur : {{ user.name }} {{ user.surname }}</h3>
+
+  <table class="table ">
+    <tbody>
+    <tr>
+      <td>Email</td>
+      <td>{{ user.email }}</td>
+    </tr>
+    <tr>
+      <td>Website</td>
+      <td><a href="{{ user.website }}">Website</a></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+  <table class="table   ">
+    <thead>
+    <tr>
+      <th>Projet</th>
+      <th>Description</th>
+      <th>Role</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="project in projects">
+      <td>{{project.title}}</td>
+      <td>{{project.description}}</td>
+      <td>{{project.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <a href="#/addrole">
+    <button class="btn btn-info">Ajouter un projet</button>
+  </a>

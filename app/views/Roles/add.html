@@ -1,0 +1,47 @@
+<form>
+  <fieldset>
+
+    <h2 class="center">Assignation d'un projet à un utilisateur</h2>
+
+    <div class=>
+      <label class="col-lg-4 " for="user">Utilisateur</label>
+
+      <div class="col-lg-6">
+        <select id="user" name="user" class="form-control" ng-options="user.name for user in utils" ng-model="user">
+        </select>
+      </div>
+    </div>
+    <br><br>
+
+    <div>
+      <label class="col-lg-4 " for="project">Projet</label>
+
+      <div class="col-lg-6">
+        <select id="project" name="project" class="form-control" ng-options="project.title for project in projects"
+                ng-model="project">
+        </select>
+      </div>
+    </div>
+    <br><br>
+
+    <div>
+      <label class="col-lg-4 " for="role">Rôle</label>
+
+      <div class="col-lg-6">
+        <input id="role" name="role"  type="text" ng-model="role.name" class="input-lg">
+      </div>
+    </div>
+    <br><br><br>
+
+    <div>
+      <div class=" col-lg-8">
+        <button id="save" name="save" class="btn btn-success" ng-click="saveData()">Ajouter</button>
+        <a href="#/users">
+          <button id="cancel" name="cancel" class="btn btn-danger">Annuler</button>
+        </a>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
